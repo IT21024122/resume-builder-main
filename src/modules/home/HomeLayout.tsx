@@ -98,7 +98,6 @@ const HomeLayout = () => {
           </motion.div>
         </div>
       </div>
-      
     </motion.div>
   );
 };
