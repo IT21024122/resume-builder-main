@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=18.17.0"
   },
   "dependencies": {
     "@date-io/dayjs": "^3.2.0",
