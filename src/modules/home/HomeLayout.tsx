@@ -98,8 +98,7 @@ const HomeLayout = () => {
           </motion.div>
         </div>
       </div>
-
-  {/** Additional sections removed per customization request */}
+      
     </motion.div>
   );
 };
