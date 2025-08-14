@@ -34,7 +34,7 @@ const HomeLayout = () => {
           </NavBarActions>
           <NavBarActions>
             <a
-              href={'https://github.com/esume-builder'}
+              href={'https://github.com/IT21024122'}
               target="_blank"
               rel="noopener noreferrer"
             >
