@@ -35,7 +35,7 @@ const HomeLayout = () => {
           <NavBarActions>
             <a
               href={'https://github.com/IT21024122'}
-              target="_blank"
+              
               rel="noopener noreferrer"
             >
               <BsGithub className="h-6 w-6" fill="white" />
