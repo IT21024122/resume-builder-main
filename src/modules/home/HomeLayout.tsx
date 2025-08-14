@@ -78,9 +78,9 @@ const HomeLayout = () => {
               <div className="flex mb-10">
                 <div className="bg-resume-800 w-1 rounded-lg"></div>
                 <p className="text-lg ml-3 text-resume-800">
-                  &ldquo;The secret to getting ahead is getting started&rdquo;
+                  &ldquo;Testing started&rdquo;
                   <br />
-                  —Mark Twain
+                  —Test1
                 </p>
               </div>
               <Link href="/builder" passHref={true}>
