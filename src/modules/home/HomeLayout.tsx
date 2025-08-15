@@ -32,15 +32,6 @@ const HomeLayout = () => {
               <StyledButton variant="text">Editor</StyledButton>
             </Link>
           </NavBarActions>
-          <NavBarActions>
-            <a
-              href={'https://github.com/IT21024122'}
-              
-              rel="noopener noreferrer"
-            >
-              <BsGithub className="h-6 w-6" fill="white" />
-            </a>
-          </NavBarActions>
         </div>
       </nav>
       <div
