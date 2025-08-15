@@ -24,17 +24,20 @@ export const PrintResume: React.FC<{ isMenuButton?: boolean }> = ({ isMenuButton
   const handleClick = () => {
     if (mobile) {
       // Prefer the Web Share API when available, otherwise show a helpful message
-      if (typeof navigator !== 'undefined' && (navigator as any).share) {
-        try {
-          (navigator as any).share({
-            title: document.title,
-            text: 'Open this page in desktop to download as PDF',
-            url: location.href,
-          });
-        } catch (e) {
-          // ignore share errors
+      if (typeof navigator !== 'undefined') {
+        const nav = navigator as Navigator & { share?: (data: ShareData) => Promise<void> };
+        if (nav.share) {
+          try {
+            nav.share({
+              title: document.title,
+              text: 'Open this page in desktop to download as PDF',
+              url: location.href,
+            });
+          } catch {
+            // ignore share errors
+          }
+          return;
         }
-        return;
       }
 
       // Mobile browsers often don't provide a direct PDF download via window.print()
