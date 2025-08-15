@@ -1,7 +1,6 @@
 import { AnimationGeneratorType, motion, useAnimation } from 'framer-motion';
 import { NavBarActions, StyledButton } from '../builder/nav-bar/atoms';
 
-import { BsGithub } from 'react-icons/bs';
 import { Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
