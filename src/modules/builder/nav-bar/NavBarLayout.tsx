@@ -1,17 +1,6 @@
-import { ChangeEvent, useCallback, useRef, useState } from 'react';
+import { useState } from 'react';
 import { NavBarActions, NavBarMenu } from './atoms';
-import {
-  useDatabases,
-  useFrameworks,
-  useLanguages,
-  useLibraries,
-  usePractices,
-  useTechnologies,
-  useTools,
-} from '@/stores/skills';
-
 import { AVAILABLE_TEMPLATES } from '@/helpers/constants';
-import DEFAULT_RESUME_JSON from '@/helpers/constants/resume-data.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NavMenuItem } from './components/MenuItem';
@@ -19,13 +8,6 @@ import { PrintResume } from './components/PrintResume';
 import { TemplateSelect } from './components/TemplateSelect';
 import { ThemeSelect } from './components/ThemeSelect';
 import { Toast } from '@/helpers/common/atoms/Toast';
-import exportFromJSON from 'export-from-json';
-import { useActivity } from '@/stores/activity';
-import { useAwards } from '@/stores/awards';
-import { useBasicDetails } from '@/stores/basic';
-import { useEducations } from '@/stores/education';
-import { useExperiences } from '@/stores/experience';
-import { useVoluteeringStore } from '@/stores/volunteering';
 import { Menu } from '@mui/material';
 
 const TOTAL_TEMPLATES_AVAILABLE = Object.keys(AVAILABLE_TEMPLATES).length;
