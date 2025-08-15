@@ -143,27 +143,6 @@ const NavBarLayout = () => {
         </NavBarMenu>
         <div className="hidden md:flex">
           <NavBarActions>
-            <StyledButton variant="text" onClick={exportResumeData}>
-              Export
-            </StyledButton>
-            <StyledButton
-              variant="text"
-              onClick={() => {
-                if (fileInputRef.current) {
-                  const fileElement = fileInputRef.current as HTMLInputElement;
-                  fileElement.click();
-                }
-              }}
-            >
-              Import{' '}
-              <input
-                type="file"
-                hidden
-                ref={fileInputRef}
-                accept="application/json"
-                onChange={handleFileChange}
-              />
-            </StyledButton>
             <PrintResume />
           </NavBarActions>
         </div>
@@ -188,25 +167,6 @@ const NavBarLayout = () => {
           horizontal: 'right',
         }}
       >
-        <MenuItem onClick={exportResumeData}>Export</MenuItem>
-        <MenuItem
-          onClick={() => {
-            if (fileInputRef.current) {
-              const fileElement = fileInputRef.current as HTMLInputElement;
-              fileElement.click();
-            }
-            handleMenuClose();
-          }}
-        >
-          Import
-          <input
-            type="file"
-            hidden
-            ref={fileInputRef}
-            accept="application/json"
-            onChange={handleFileChange}
-          />
-        </MenuItem>
         <PrintResume isMenuButton />
       </Menu>
       <Toast
