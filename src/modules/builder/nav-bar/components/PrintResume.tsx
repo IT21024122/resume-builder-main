@@ -41,10 +41,15 @@ export const PrintResume: React.FC<{ isMenuButton?: boolean }> = ({ isMenuButton
       }
 
       // Mobile browsers often don't provide a direct PDF download via window.print()
-      // Give the user a clear instruction instead of failing silently.
-      globalThis?.alert(
-        'Downloading as PDF is unreliable on mobile browsers. Please open this page on a desktop browser and use the "Download as PDF" button, or use your browser\'s Share/Print option.'
-      );
+      // Open the current page in a new tab so users can use the browser's Share/Print options.
+      try {
+        window.open(location.href, '_blank');
+      } catch {
+        // Fallback to an informative alert if opening a new tab fails
+        globalThis?.alert(
+          'Downloading as PDF is unreliable on mobile browsers. Please open this page on a desktop browser and use the "Download as PDF" button, or use your browser\'s Share/Print option.'
+        );
+      }
       return;
     }
 
