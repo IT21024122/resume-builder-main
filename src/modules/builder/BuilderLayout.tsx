@@ -4,42 +4,8 @@ import NavBarLayout from './nav-bar/NavBarLayout';
 import ResumeHeader from './resume/components/ResumeHeader';
 import { ResumeLayout } from './resume/ResumeLayout';
 import Tooltip from '@mui/material/Tooltip';
-import { useEffect } from 'react';
 
 const BuilderLayout = () => {
-  useEffect(() => {
-    // only run on client
-    if (typeof window === 'undefined') return;
-
-    const POP_SRC =
-      '//pl27446447.profitableratecpm.com/71/1b/b5/711bb59bbdc4318e669e6f3863b3b910.js';
-
-    const injectPopunder = () => {
-      try {
-        const s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.src = POP_SRC;
-        s.async = true;
-        document.body.appendChild(s);
-
-        // remove the script after a minute to avoid DOM growth
-        setTimeout(() => {
-          if (s.parentNode) s.parentNode.removeChild(s);
-        }, 60 * 1000);
-      } catch {
-        // ignore any injection errors
-      }
-    };
-
-    // inject once shortly after load, then every 10 minutes
-    const firstTimeout = window.setTimeout(injectPopunder, 1000);
-    const intervalId = window.setInterval(injectPopunder, 10 * 60 * 1000);
-
-    return () => {
-      clearTimeout(firstTimeout);
-      clearInterval(intervalId);
-    };
-  }, []);
   return (
     <div className="flex flex-col h-screen">
       <NavBarLayout />
