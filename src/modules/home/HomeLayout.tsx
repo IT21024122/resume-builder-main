@@ -28,7 +28,7 @@ const HomeLayout = () => {
         <div className="flex-auto flex justify-between items-center ml-5">
           <NavBarActions>
             <Link href="/builder" passHref={true}>
-              <StyledButton variant="text">Editor</StyledButton>
+              <StyledButton variant="text">BUILD</StyledButton>
             </Link>
           </NavBarActions>
         </div>
@@ -62,7 +62,7 @@ const HomeLayout = () => {
               />
             </div>
             <div className="col-span-12 sm:col-span-8">
-              <h3 className="text-xl md:text-2xl mb-2 text-resume-400">SIMPLEST WAY TO BUILD A</h3>
+              <h3 className="text-xl md:text-2xl mb-2 text-resume-400">SMART ATS-FRIENDLY</h3>
               <h1 className="text-5xl mb-12 text-resume-800">Professional Resume</h1>
 
               <div className="flex mb-10">
@@ -75,7 +75,7 @@ const HomeLayout = () => {
               </div>
               <Link href="/builder" passHref={true}>
                 <Button variant="contained" className="bg-resume-800 mb-2">
-                  BUILD YOUR RESUME
+                  BUILD RESUME
                 </Button>
               </Link>
               <p
