@@ -70,7 +70,7 @@ const HomeLayout = () => {
                 <p className="text-lg ml-3 text-resume-800">
                   &ldquo;Don’t let your dream job slip away&rdquo;
                   <br />
-                  —Test1
+                  —Create a job-winning, ATS-ready CV today.
                 </p>
               </div>
               <Link href="/builder" passHref={true}>
