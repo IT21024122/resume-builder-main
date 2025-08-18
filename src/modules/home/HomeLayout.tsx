@@ -2,6 +2,7 @@ import { AnimationGeneratorType, motion, useAnimation } from 'framer-motion';
 import { NavBarActions, StyledButton } from '../builder/nav-bar/atoms';
 
 import { Button } from '@mui/material';
+import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -78,6 +79,13 @@ const HomeLayout = () => {
                   BUILD RESUME
                 </Button>
               </Link>
+              {/* Ad banner container - loaded after page is interactive */}
+              <Script
+                src="//pl27445916.profitableratecpm.com/b9c2dcb5d2ce595d9cfaa85432431003/invoke.js"
+                strategy="afterInteractive"
+                data-cfasync="false"
+              />
+              <div id="container-b9c2dcb5d2ce595d9cfaa85432431003"></div>
               <p
                 className="xl:invisible text-resume-800"
                 style={{ fontFamily: "'Roboto Slab', serif" }}
