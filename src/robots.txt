@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://resume-builder-main-nu.vercel.app/sitemap.xml
