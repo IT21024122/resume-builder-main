@@ -12,6 +12,32 @@ const EditorLayout = () => {
   const section = headers[link];
 
   const linkClickHandler = (link: string) => {
+    // If the user clicks 'basic-details' for the first time, open ad in a new tab
+    try {
+      if (link === 'basic-details') {
+        const flagKey = 'seen_basic_details_ad_v1';
+        const seen = typeof window !== 'undefined' ? window.localStorage.getItem(flagKey) : null;
+        if (!seen) {
+          // open ad in new tab on first click and set flag; do not open editor yet
+          const adUrl =
+            'https://www.profitableratecpm.com/tv21wwyj?key=23260ec0dd0c52efa4d7fc9327104ace';
+          try {
+            window.open(adUrl, '_blank');
+          } catch {
+            // ignore popup blockers
+          }
+          try {
+            window.localStorage.setItem(flagKey, '1');
+          } catch {
+            // ignore storage errors
+          }
+          return;
+        }
+      }
+    } catch {
+      // fall through to normal behavior on error
+    }
+
     setLink(link);
   };
 
