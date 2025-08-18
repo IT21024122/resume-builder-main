@@ -68,7 +68,7 @@ const HomeLayout = () => {
               <div className="flex mb-10">
                 <div className="bg-resume-800 w-1 rounded-lg"></div>
                 <p className="text-lg ml-3 text-resume-800">
-                  &ldquo;Testing started&rdquo;
+                  &ldquo;Don’t let your dream job slip away&rdquo;
                   <br />
                   —Test1
                 </p>
